@@ -1,0 +1,1 @@
+# SurrealDB study with Rust
