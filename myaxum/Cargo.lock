@@ -309,6 +309,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "myaxum"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "tokio",
+]
+
+[[package]]
 name = "num_cpus"
 version = "1.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -531,14 +539,6 @@ checksum = "7b5fac59a5cb5dd637972e5fca70daf0523c9067fcdc4842f053dae04a18f8e9"
 dependencies = [
  "libc",
  "windows-sys",
-]
-
-[[package]]
-name = "surrealdb-with-rust"
-version = "0.1.0"
-dependencies = [
- "axum",
- "tokio",
 ]
 
 [[package]]

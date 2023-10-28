@@ -16,3 +16,8 @@ async fn main() {
 async fn root() -> &'static str {
     "Hello World!"
 }
+
+struct Test {
+    hello: isize,
+    world: String,
+}
