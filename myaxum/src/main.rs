@@ -1,16 +1,12 @@
 use axum::routing::get;
 use axum::Router;
-use std::net::SocketAddr;
 
 #[tokio::main]
 async fn main() {
     let app = Router::new().route("/", get(root));
 
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
-    axum::Server::bind(&addr)
-        .serve(app.into_make_service())
-        .await
-        .unwrap();
+    let addr = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    axum::serve(addr, app.into_make_service()).await.unwrap();
 }
 
 async fn root() -> &'static str {
