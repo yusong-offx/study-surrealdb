@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-axum = "0.7.4"
+axum = { version = "0", features = ["ws"] }
 tokio = { version = "1.33.0", features = ["full"] }
 scrypt = "0.11.0"
 jsonwebtoken = "9"
